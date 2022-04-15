@@ -5,22 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".QrActivity">
-<!--    <androidx.camera.view.PreviewView-->
-<!--        android:id="@+id/activity_main_previewView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        />-->
-<!--    <Button-->
-<!--        android:id="@+id/btnQrFound"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="QR Code Found"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/activity_main_previewView"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->    <TextView
-    android:id="@+id/textView"
+
+
+
+    <TextView
+    android:id="@+id/tvUserName"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:textSize="24sp"
+    android:textAllCaps="true"
     android:text="Tap below to scan"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintLeft_toLeftOf="parent"
@@ -29,13 +22,12 @@
 
     <ImageButton
         android:id="@+id/qr_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
         app:srcCompat="@drawable/qr_scanner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
