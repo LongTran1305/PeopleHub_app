@@ -6,9 +6,16 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Data {
+
+    @SerializedName("updatedAt")
+    @Expose
+    private Long updatedAt;
     @SerializedName("createdBy")
     @Expose
     private String createdBy;
+    @SerializedName("updatedBy")
+    @Expose
+    private String updatedBy;
     @SerializedName("id")
     @Expose
     private Integer id;
@@ -33,12 +40,35 @@ public class Data {
     @SerializedName("phone")
     @Expose
     private String phone;
+    @SerializedName("dob")
+    @Expose
+    private String dob;
+    @SerializedName("gender")
+    @Expose
+    private Integer gender;
+    @SerializedName("about")
+    @Expose
+    private String about;
     @SerializedName("isDeleted")
     @Expose
     private Boolean isDeleted;
+    @SerializedName("enabled")
+    @Expose
+    private Boolean enabled;
+    @SerializedName("avatar")
+    @Expose
+    private String avatar;
     @SerializedName("roles")
     @Expose
-    private List<String> roles = null;
+    private List<Object> roles = null;
+
+    public Long getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Long updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 
     public String getCreatedBy() {
         return createdBy;
@@ -46,6 +76,14 @@ public class Data {
 
     public void setCreatedBy(String createdBy) {
         this.createdBy = createdBy;
+    }
+
+    public String getUpdatedBy() {
+        return updatedBy;
+    }
+
+    public void setUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
     }
 
     public Integer getId() {
@@ -112,6 +150,30 @@ public class Data {
         this.phone = phone;
     }
 
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public Integer getGender() {
+        return gender;
+    }
+
+    public void setGender(Integer gender) {
+        this.gender = gender;
+    }
+
+    public String getAbout() {
+        return about;
+    }
+
+    public void setAbout(String about) {
+        this.about = about;
+    }
+
     public Boolean getIsDeleted() {
         return isDeleted;
     }
@@ -120,11 +182,28 @@ public class Data {
         this.isDeleted = isDeleted;
     }
 
-    public List<String> getRoles() {
+    public Boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public List<Object> getRoles() {
         return roles;
     }
 
-    public void setRoles(List<String> roles) {
+    public void setRoles(List<Object> roles) {
         this.roles = roles;
     }
+
 }

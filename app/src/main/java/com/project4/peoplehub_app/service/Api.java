@@ -11,6 +11,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 
 public interface Api {
 
@@ -21,6 +22,6 @@ public interface Api {
     @GET("users/info")
     Call<UserResponse> getUserInfo(@Header(value = "Authorization") String accessToken);
 
-    @POST("friends/{followerName}")
-    Call<AddFriendResponse> sendAddFriend(@Header(value = "Authorization") String accessToken,String followerName);
+    @POST("friends/add-friend/{followerName}")
+    Call<AddFriendResponse> sendAddFriend(@Header(value = "Authorization") String accessToken,@Path(value = "followerName") String followerName);
 }
